@@ -1,7 +1,7 @@
 # Endpoints
 
 
-## api/user
+## api/autores
 
 
 
@@ -10,14 +10,14 @@
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user" \
+    -G "http://localhost/api/autores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user"
+    "http://localhost/api/autores"
 );
 
 let headers = {
@@ -35,17 +35,203 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
+
+```json
+[
+    {
+        "id": 1,
+        "created_at": "2020-05-23T20:11:34.000000Z",
+        "updated_at": "2020-05-23T20:11:34.000000Z",
+        "PrimeiroNome": "Nome",
+        "UltimoNome": "Apelido",
+        "Telefone": null
+    }
+]
+```
+
+### Request
+<small class="badge badge-green">GET</small>
+ **`api/autores`**
+
+
+
+## api/autores
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/autores" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/autores"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### Request
+<small class="badge badge-black">POST</small>
+ **`api/autores`**
+
+
+
+## api/autores/{autore}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/autores/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/autores/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthenticated."
+    "id": 1,
+    "created_at": "2020-05-23T20:11:34.000000Z",
+    "updated_at": "2020-05-23T20:11:34.000000Z",
+    "PrimeiroNome": "Nome",
+    "UltimoNome": "Apelido",
+    "Telefone": null
 }
 ```
 
 ### Request
 <small class="badge badge-green">GET</small>
- **`api/user`**
+ **`api/autores/{autore}`**
+
+
+
+## api/autores/{autore}
+
+
+
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/api/autores/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/autores/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### Request
+<small class="badge badge-darkblue">PUT</small>
+ **`api/autores/{autore}`**
+
+<small class="badge badge-purple">PATCH</small>
+ **`api/autores/{autore}`**
+
+
+
+## api/autores/{autore}
+
+
+
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/api/autores/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/autores/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### Request
+<small class="badge badge-red">DELETE</small>
+ **`api/autores/{autore}`**
 
 
 
