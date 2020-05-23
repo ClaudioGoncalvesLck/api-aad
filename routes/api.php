@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::apiResource('autores', 'api\AutorController');
+Route::apiResource('autor', 'api\AutorController');
