@@ -53,16 +53,16 @@
 <p>Welcome to our API documentation!</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile), and you can switch the programming language of the examples with the tabs in the top right (or from the nav menu at the top left on mobile).</aside><h1>Authenticating requests</h1>
 <p>This API is not authenticated.</p><h1>Endpoints</h1>
-<h2>api/autores</h2>
+<h2>api/autor</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/autores" \
+    -G "http://localhost/api/autor" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/autores"
+    "http://localhost/api/autor"
 );
 
 let headers = {
@@ -77,454 +77,31 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <blockquote>
-<p>Example response (500):</p>
+<p>Example response (200):</p>
 </blockquote>
-<pre><code class="language-json">{
-    "message": "include(C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\/..\/..\/app\/Models\/Autor.php): failed to open stream: No such file or directory",
-    "exception": "ErrorException",
-    "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-    "line": 444,
-    "trace": [
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 444,
-            "function": "handleError",
-            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 444,
-            "function": "include"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 322,
-            "function": "Composer\\Autoload\\includeFile"
-        },
-        {
-            "function": "loadClass",
-            "class": "Composer\\Autoload\\ClassLoader",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\app\\Http\\Controllers\\api\\AutorController.php",
-            "line": 13,
-            "function": "spl_autoload_call"
-        },
-        {
-            "function": "index",
-            "class": "App\\Http\\Controllers\\api\\AutorController",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
-            "line": 54,
-            "function": "call_user_func_array"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
-            "line": 45,
-            "function": "callAction",
-            "class": "Illuminate\\Routing\\Controller",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 239,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\ControllerDispatcher",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 196,
-            "function": "runController",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 685,
-            "function": "run",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
-            "line": 41,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 59,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 687,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 662,
-            "function": "runRouteWithinStack",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 628,
-            "function": "runRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 617,
-            "function": "dispatchToRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 165,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Foundation\\Http\\{closure}",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
-            "line": 27,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
-            "line": 63,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 37,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fideloper\\Proxy\\TrustProxies",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 140,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 109,
-            "function": "sendRequestThroughRouter",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 322,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 304,
-            "function": "callLaravelOrLumenRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 76,
-            "function": "makeApiCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 51,
-            "function": "makeResponseCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 41,
-            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 203,
-            "function": "__invoke",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 141,
-            "function": "iterateThroughStrategies",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 101,
-            "function": "fetchResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 118,
-            "function": "processRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 73,
-            "function": "processRoutes",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "-&gt;"
-        },
-        {
-            "function": "handle",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 33,
-            "function": "call_user_func_array"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
-            "line": 36,
-            "function": "Illuminate\\Container\\{closure}",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 91,
-            "function": "unwrapIfClosure",
-            "class": "Illuminate\\Container\\Util",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 35,
-            "function": "callBoundMethod",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
-            "line": 592,
-            "function": "call",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 134,
-            "function": "call",
-            "class": "Illuminate\\Container\\Container",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 255,
-            "function": "execute",
-            "class": "Illuminate\\Console\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 121,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Command\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 912,
-            "function": "run",
-            "class": "Illuminate\\Console\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 264,
-            "function": "doRunCommand",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 140,
-            "function": "doRun",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
-            "line": 93,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
-            "line": 129,
-            "function": "run",
-            "class": "Illuminate\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\artisan",
-            "line": 37,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Console\\Kernel",
-            "type": "-&gt;"
-        }
-    ]
-}</code></pre>
+<pre><code class="language-json">[
+    {
+        "id": 1,
+        "created_at": "2020-05-23T20:11:34.000000Z",
+        "updated_at": "2020-05-23T20:11:34.000000Z",
+        "PrimeiroNome": "Nome",
+        "UltimoNome": "Apelido",
+        "Telefone": null
+    }
+]</code></pre>
 <h3>Request</h3>
 <p><small class="badge badge-green">GET</small>
-<strong><code>api/autores</code></strong></p>
-<h2>api/autores</h2>
+<strong><code>api/autor</code></strong></p>
+<h2>api/autor</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "http://localhost/api/autores" \
+    "http://localhost/api/autor" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/autores"
+    "http://localhost/api/autor"
 );
 
 let headers = {
@@ -540,17 +117,17 @@ fetch(url, {
     .then(json =&gt; console.log(json));</code></pre>
 <h3>Request</h3>
 <p><small class="badge badge-black">POST</small>
-<strong><code>api/autores</code></strong></p>
-<h2>api/autores/{autore}</h2>
+<strong><code>api/autor</code></strong></p>
+<h2>api/autor/{autor}</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/autores/1" \
+    -G "http://localhost/api/autor/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/autores/1"
+    "http://localhost/api/autor/1"
 );
 
 let headers = {
@@ -565,454 +142,29 @@ fetch(url, {
     .then(response =&gt; response.json())
     .then(json =&gt; console.log(json));</code></pre>
 <blockquote>
-<p>Example response (500):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "include(C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\/..\/..\/app\/Models\/Autor.php): failed to open stream: No such file or directory",
-    "exception": "ErrorException",
-    "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-    "line": 444,
-    "trace": [
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 444,
-            "function": "handleError",
-            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 444,
-            "function": "include"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\composer\\ClassLoader.php",
-            "line": 322,
-            "function": "Composer\\Autoload\\includeFile"
-        },
-        {
-            "function": "loadClass",
-            "class": "Composer\\Autoload\\ClassLoader",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\app\\Http\\Controllers\\api\\AutorController.php",
-            "line": 23,
-            "function": "spl_autoload_call"
-        },
-        {
-            "function": "show",
-            "class": "App\\Http\\Controllers\\api\\AutorController",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
-            "line": 54,
-            "function": "call_user_func_array"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
-            "line": 45,
-            "function": "callAction",
-            "class": "Illuminate\\Routing\\Controller",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 239,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\ControllerDispatcher",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
-            "line": 196,
-            "function": "runController",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 685,
-            "function": "run",
-            "class": "Illuminate\\Routing\\Route",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Routing\\{closure}",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
-            "line": 41,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 59,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 687,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 662,
-            "function": "runRouteWithinStack",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 628,
-            "function": "runRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
-            "line": 617,
-            "function": "dispatchToRoute",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 165,
-            "function": "dispatch",
-            "class": "Illuminate\\Routing\\Router",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 128,
-            "function": "Illuminate\\Foundation\\Http\\{closure}",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
-            "line": 21,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
-            "line": 27,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
-            "line": 63,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
-            "line": 37,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fruitcake\\Cors\\HandleCors",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
-            "line": 57,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 167,
-            "function": "handle",
-            "class": "Fideloper\\Proxy\\TrustProxies",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 103,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 140,
-            "function": "then",
-            "class": "Illuminate\\Pipeline\\Pipeline",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
-            "line": 109,
-            "function": "sendRequestThroughRouter",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 322,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Http\\Kernel",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 304,
-            "function": "callLaravelOrLumenRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 76,
-            "function": "makeApiCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 51,
-            "function": "makeResponseCall",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
-            "line": 41,
-            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 203,
-            "function": "__invoke",
-            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 141,
-            "function": "iterateThroughStrategies",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
-            "line": 101,
-            "function": "fetchResponses",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 118,
-            "function": "processRoute",
-            "class": "Knuckles\\Scribe\\Extracting\\Generator",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
-            "line": 73,
-            "function": "processRoutes",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "-&gt;"
-        },
-        {
-            "function": "handle",
-            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 33,
-            "function": "call_user_func_array"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
-            "line": 36,
-            "function": "Illuminate\\Container\\{closure}",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 91,
-            "function": "unwrapIfClosure",
-            "class": "Illuminate\\Container\\Util",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
-            "line": 35,
-            "function": "callBoundMethod",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
-            "line": 592,
-            "function": "call",
-            "class": "Illuminate\\Container\\BoundMethod",
-            "type": "::"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 134,
-            "function": "call",
-            "class": "Illuminate\\Container\\Container",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Command\\Command.php",
-            "line": 255,
-            "function": "execute",
-            "class": "Illuminate\\Console\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
-            "line": 121,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Command\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 912,
-            "function": "run",
-            "class": "Illuminate\\Console\\Command",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 264,
-            "function": "doRunCommand",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\symfony\\console\\Application.php",
-            "line": 140,
-            "function": "doRun",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
-            "line": 93,
-            "function": "run",
-            "class": "Symfony\\Component\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
-            "line": 129,
-            "function": "run",
-            "class": "Illuminate\\Console\\Application",
-            "type": "-&gt;"
-        },
-        {
-            "file": "C:\\Users\\claud\\api-aad\\api-aad\\artisan",
-            "line": 37,
-            "function": "handle",
-            "class": "Illuminate\\Foundation\\Console\\Kernel",
-            "type": "-&gt;"
-        }
-    ]
+    "id": 1,
+    "created_at": "2020-05-23T20:11:34.000000Z",
+    "updated_at": "2020-05-23T20:11:34.000000Z",
+    "PrimeiroNome": "Nome",
+    "UltimoNome": "Apelido",
+    "Telefone": null
 }</code></pre>
 <h3>Request</h3>
 <p><small class="badge badge-green">GET</small>
-<strong><code>api/autores/{autore}</code></strong></p>
-<h2>api/autores/{autore}</h2>
+<strong><code>api/autor/{autor}</code></strong></p>
+<h2>api/autor/{autor}</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/autores/1" \
+    "http://localhost/api/autor/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/autores/1"
+    "http://localhost/api/autor/1"
 );
 
 let headers = {
@@ -1028,19 +180,19 @@ fetch(url, {
     .then(json =&gt; console.log(json));</code></pre>
 <h3>Request</h3>
 <p><small class="badge badge-darkblue">PUT</small>
-<strong><code>api/autores/{autore}</code></strong></p>
+<strong><code>api/autor/{autor}</code></strong></p>
 <p><small class="badge badge-purple">PATCH</small>
-<strong><code>api/autores/{autore}</code></strong></p>
-<h2>api/autores/{autore}</h2>
+<strong><code>api/autor/{autor}</code></strong></p>
+<h2>api/autor/{autor}</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/autores/1" \
+    "http://localhost/api/autor/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/autores/1"
+    "http://localhost/api/autor/1"
 );
 
 let headers = {
@@ -1056,7 +208,7 @@ fetch(url, {
     .then(json =&gt; console.log(json));</code></pre>
 <h3>Request</h3>
 <p><small class="badge badge-red">DELETE</small>
-<strong><code>api/autores/{autore}</code></strong></p>
+<strong><code>api/autor/{autor}</code></strong></p>
 <h2>/</h2>
 <blockquote>
 <p>Example request:</p>

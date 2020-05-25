@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "Laravel API",
-        "_postman_id": "4846a6e0-dca5-4841-8e6b-2804f69a253b",
+        "_postman_id": "fe7e698b-562c-4f4a-bda7-e69b2b335dde",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -12,12 +12,12 @@
             "description": "",
             "item": [
                 {
-                    "name": "api\/autores",
+                    "name": "api\/autor",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "localhost",
-                            "path": "api\/autores",
+                            "path": "api\/autor",
                             "query": []
                         },
                         "method": "GET",
@@ -45,12 +45,12 @@
                     }
                 },
                 {
-                    "name": "api\/autores",
+                    "name": "api\/autor",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "localhost",
-                            "path": "api\/autores",
+                            "path": "api\/autor",
                             "query": []
                         },
                         "method": "POST",
@@ -78,12 +78,12 @@
                     }
                 },
                 {
-                    "name": "api\/autores\/{autore}",
+                    "name": "api\/autor\/{autor}",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "localhost",
-                            "path": "api\/autores\/:autore",
+                            "path": "api\/autor\/:autor",
                             "query": []
                         },
                         "method": "GET",
@@ -111,12 +111,12 @@
                     }
                 },
                 {
-                    "name": "api\/autores\/{autore}",
+                    "name": "api\/autor\/{autor}",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "localhost",
-                            "path": "api\/autores\/:autore",
+                            "path": "api\/autor\/:autor",
                             "query": []
                         },
                         "method": "PUT",
@@ -144,12 +144,12 @@
                     }
                 },
                 {
-                    "name": "api\/autores\/{autore}",
+                    "name": "api\/autor\/{autor}",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "localhost",
-                            "path": "api\/autores\/:autore",
+                            "path": "api\/autor\/:autor",
                             "query": []
                         },
                         "method": "DELETE",
